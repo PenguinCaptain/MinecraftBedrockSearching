@@ -1,0 +1,29 @@
+{
+  "name": "minecraftbedrocksearching",
+  "version": "1.0.0",
+  "description": "Searching online in minecraft bedrock edition with the script written in nodejs.",
+  "main": "MCSearch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PenguinCaptain/MinecraftBedrockSearching.git"
+  },
+  "keywords": [
+    "minecraftpe",
+    "minecraftbe",
+    "mcpe-agent"
+  ],
+  "author": "PenguinCaptain",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/PenguinCaptain/MinecraftBedrockSearching/issues"
+  },
+  "homepage": "https://github.com/PenguinCaptain/MinecraftBedrockSearching#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "puppeteer": "^1.19.0",
+    "ws": "^7.1.1"
+  }
+}
