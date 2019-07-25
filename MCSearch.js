@@ -1,5 +1,4 @@
 const Methods = require("./modules/Methods");
-const ID=new (require("./modules/id"))();
 const PackageProcess = require("./modules/PkgProc.js")
 const Websocket = require('ws');
 const wss = new Websocket.Server({ port: 19312 });
@@ -66,9 +65,8 @@ class MCSearch{
 	}
 
 	onConnection(ws,req){
-		let wsi=ID.getid(ws);
 		const PkgProc = new PackageProcess(ws,Methods);
-		console.log("A new client connected,ID: %d,IP: %s",wsi.id,req.connection.remoteAddress);
+		console.log("A new client connected,IP: %s",req.connection.remoteAddress);
 		PkgProc.subscribe("PlayerMessage");
 		PkgProc.SendText("MCSearch Connected.");
 		ws.on("message",(message)=>{
