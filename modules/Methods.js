@@ -10,7 +10,7 @@ class Methods{
 	}
 
 	static getHost(){
-		return require('os').networkInterfaces()[Object.keys(require('os').networkInterfaces())[1]][1].address;
+		return require('os').networkInterfaces()[Object.keys(require('os').networkInterfaces())[0]][1].address;
 	}
 }
 

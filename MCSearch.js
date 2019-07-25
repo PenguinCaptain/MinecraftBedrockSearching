@@ -15,7 +15,7 @@ function getResults(keyword,PkgProc){
   		const content = await page.content();
 
   		const $ = cheerio.load(content, { decodeEntities: false });
-  		$('.result.c-container').each((index, el) => {
+  		$('.result.c-container').each((index, el) => {	
     		 console.log($(el).find('h3 a').text());
     		 PkgProc.SendText($(el).find('h3 a').text());
 
@@ -35,7 +35,8 @@ class MCSearch{
 		try{
 			console.log("Server Opened on %s:19312",Methods.getHost());
 		} catch (e) {
-
+			console.log(e);
+			return;
 		}
 
 	}
@@ -75,7 +76,7 @@ class MCSearch{
 		});
 	}
 }
-wss.on("connection",onConnection)
+wss.on("connection",onConnection);
 const mcsearch = new MCSearch();
 mcsearch.contructor();
 function onConnection(ws,req){
